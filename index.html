@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>JavaScript Grundlagen</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<!-- JavaScript Coding -->
+	<script type="text/javascript">
+
+/************ 1.Variablen ***********************/
+		var a=7;//Initialisierung bei Definition
+		var b=0.1;
+		var c=a+b;
+		var d="Neue iOS-Version "+c+". Datentyp: ";
+		var e=typeof(d);
+		console.log(d,e,". Angehängter String");
+		var aa;//Keine Initialisierung
+		var bb=typeof(aa);
+		console.log(bb);
+
+/************ 2.Arrays **********************/
+		var f=new Array(4,56,211);//Initialisierung
+		console.log(f);
+		console.log(f[2]);
+		console.log("Anzahl Array-Elemente: " + f.length);
+		f[3]="Dennis";
+		console.log('Hinzugefügt Array-Element f[3]: ' + f[3]);
+		console.log(f);
+		var g=new Array();//Keine Initialisierung
+		console.log(g);
+		var h=f.reverse();
+		console.log(h);
+		var i=f.sort();
+		console.log(i);
+		var j=f.join(";");
+		console.log(j);
+
+/************ 3.Verzweigungen **********************/
+		var k=4;
+		if (k===5){
+			console.log('k ist 5');
+		} else {
+			console.log('k ist nicht 5');
+		}	
+		switch(k){
+			case 5: console.log('k ist 5');break;
+			case 4: console.log('k ist 4');break;
+		}
+
+/************ 4.Schleifen **********************/
+		var l = new Array(54,123,8);
+		for(i=0;i<l.length;i++){
+			console.log('Array-Element: '+l[i]);
+		}
+		while (i<6){
+			console.log('while-Schleife wird durchlaufen');
+			i++;
+		}
+		do{
+			console.log("Wert von i: "+i);
+			i++;
+		}while(i<8);
+		console.log('do-while-Schleife ist beendet.');
+
+/************ 5.Funktionen **********************/
+		function berechneZahl(){
+			var erg = 5*4;
+			return erg;
+		}
+		console.log("Berechnung: " + berechneZahl());
+		function berechneZahl2(m,n){
+			return m+n;
+		}
+		console.log("2.Berechnung: " + berechneZahl2(5,4));
+		//window ist ein Objekt.
+		window.onload=function(){//Anonyme Funktion
+			console.log('DOM ist geladen.');
+		}
+
+/************ 6.Objekte **********************/
+		var o="Grundlagen";
+		console.log('Anzahl Charakters: ' + o.length);
+		var person = new Object();//Objekt anlegen
+		console.log(person);
+		person.name="Donald";//Eigenschaft anlegen
+		person.alter="53";
+		console.log(person);
+		person.ausgabe=function(){//Methode anlegen
+			console.log('Vorname: '+person.name+', Alter: '+person.alter);
+		}
+		console.log(person.ausgabe());
+	</script>
+</body>	
+
+</html>
